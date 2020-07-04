@@ -2,7 +2,7 @@ const { fromWei, toWei, toBN } = require('web3-utils');
 const pricefeed = require('./pricefeed');
 const { toDecimal } = require('./utils/decimals');
 
-const PRICE_POLL_INTERVAL = 15 * 1000;
+const PRICE_POLL_INTERVAL = 60000; // 60 seconds
 
 class Asset {
   constructor({ id, name, network, usdPrice, priceSymbol, icon=null, type=null, decimals=18 }) {
